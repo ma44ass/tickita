@@ -35,7 +35,7 @@ export const SignInCard = () => {
 
     return (
         <Card className="w-full h-full md:w-[490px] border-none shadow-none">
-            <CardHeader className="flex items-center justify-center text-center p-7">
+            <CardHeader className="flex items-center justify-center text-center p-4">
                 <CardTitle className="text-2xl">
                     Welcome Back!
                 </CardTitle>

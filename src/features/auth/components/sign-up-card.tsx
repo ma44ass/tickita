@@ -36,7 +36,7 @@ export const SignUpCard = () => {
 
     return (
         <Card className="w-full h-full md:w-[490px] border-none shadow-none">
-            <CardHeader className="flex flex-col items-center justify-center text-center p-7">
+            <CardHeader className="flex flex-col items-center justify-center text-center p-5">
                 <CardTitle className="text-2xl">
                     Sign Up
                 </CardTitle>
@@ -56,7 +56,7 @@ export const SignUpCard = () => {
                 <DotSeperator />
             </div>
 
-            <CardContent className="p-7">
+            <CardContent className="p-5">
                 <Form {...form}>
                     <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-7">
                         <FormField
@@ -84,7 +84,7 @@ export const SignUpCard = () => {
                                         <Input
                                         {...field}
                                         type="email"
-                                        placeholder="Enter Email address"
+                                        placeholder="Enter Your Email address"
                                         />
                                     </FormControl>
                                     <FormMessage />
@@ -117,7 +117,7 @@ export const SignUpCard = () => {
             <div className="px-7">
                 <DotSeperator />
             </div>
-            <CardContent className="p-7 flex flex-col gap-y-4">
+            <CardContent className="p-5 flex flex-col gap-y-4">
                 <Button variant="secondary"
                         disabled={false}
                         size="lg"
@@ -138,7 +138,7 @@ export const SignUpCard = () => {
             <div className="px-7">
                             <DotSeperator />
                         </div>
-                        <CardContent className=" p-7 flex items-center justify-center">
+                        <CardContent className=" p-5 flex items-center justify-center">
                             <p>
                                 Already have an account?
                                 <Link href="/sign-in">
