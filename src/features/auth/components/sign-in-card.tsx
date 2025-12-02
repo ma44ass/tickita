@@ -5,32 +5,31 @@ import {z} from "zod";
 import {zodResolver} from "@hookform/resolvers/zod";
 
 import { DotSeperator } from "@/components/dot-seperator";
-
 import {Card,CardContent,CardHeader,CardTitle} from "@/components/ui/card";
 import {Form,FormControl,FormField,FormMessage,FormItem} from "@/components/ui/form";
-
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+
+import { loginSchema } from "../schemas";
+import { useLogin } from "../api/use-login";
+
 import Link from "next/link";
 
 
-const formSchema = z.object({
-    email: z.email(),
-    password: z.string().min(1, "Required"),
-});
-
 export const SignInCard = () => {
 
-    const form = useForm<z.infer<typeof formSchema>>({
-        resolver: zodResolver(formSchema),
+    const {mutate} = useLogin();
+
+    const form = useForm<z.infer<typeof loginSchema>>({
+        resolver: zodResolver(loginSchema),
         defaultValues:{
             email: "",
             password: "",
         },
     });
 
-    const onSubmit = (values: z.infer<typeof formSchema>) => {
-        console.log({values});
+    const onSubmit = (values: z.infer<typeof loginSchema>) => {
+        mutate({json:values});
     };
 
     return (
