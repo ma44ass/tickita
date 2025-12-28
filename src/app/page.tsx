@@ -1,29 +1,29 @@
-import { Button } from "@/components/ui/button";
+"use client";
 
+import { Button } from "@/components/ui/button";
+import { useCurrent } from "@/features/auth/api/use-current"
+import { useLogout } from "@/features/auth/api/use-logout";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 export default function Home() {
+  const router = useRouter();
+
+  const {data, isLoading} = useCurrent();
+  const {mutate} = useLogout();
+
+  useEffect(() => {
+    if(!data && !isLoading){
+        router.push("/sign-in");
+    }
+  });
   return (
-    <div className="flex">
-      <Button size="xs" variant="primary">
-        Primary
-      </Button>
-      <Button variant="secondary">
-        Secondary
-      </Button>
-      <Button variant="destructive">
-        Destructive
-      </Button>
-      <Button variant="ghost">
-        Ghost
-      </Button>
-      <Button variant="muted">
-        Muted
-      </Button>
-      <Button variant="teritary">
-        teritary
+    <div>
+      Only allowed for Authorized users
+      <Button onClick={ () => mutate()}>
+        Logout
       </Button>
     </div>
   )
 
-  ;
 }
