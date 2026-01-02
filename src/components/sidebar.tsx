@@ -1,0 +1,18 @@
+import Link from "next/link";
+import Image from "next/image";
+import { DotSeperator } from "./dot-seperator";
+import { Navigation } from "./Navigation";
+
+
+export const Sidebar = () => {
+    return (
+        <aside className=" h-full bg-neutral-100 p-4 w-full">
+            <Link href="/">
+                <Image src="/logo.svg" alt ="logo" width={152} height={56} />
+            </Link>
+            <DotSeperator className="my-4" />
+            <Navigation />
+        </aside>
+    );
+};
+
