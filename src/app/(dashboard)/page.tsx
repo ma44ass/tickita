@@ -12,7 +12,7 @@ export default async function Home() {
 
   return (
     <div>
-      <UserButton/>
+      THIS IS A HOME PAGE
     </div>
   );
 };
