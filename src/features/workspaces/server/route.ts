@@ -21,7 +21,7 @@ const app = new Hono()
                 tableId:WORKSPACES_ID,
                 rowId:ID.unique(),
                 data:{
-                  name,  
+                  NAME: name,
                   userId: user.$id,
                 },
             });
