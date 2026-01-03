@@ -14,12 +14,13 @@ import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 export const MobileSidebar = () => {
 
     const [isOpen, setIsOpen] = useState(false);
+    //Check other ways to do this //
     const pathName = usePathname();
 
     useEffect(() => {
         setIsOpen(false)
     },[pathName]);
-
+ 
     return (
         <Sheet modal={false} open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
