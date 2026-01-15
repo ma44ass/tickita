@@ -8,14 +8,14 @@ import { ID } from "node-appwrite";
 const app = new Hono()
     .post(
         "/",
-        zValidator("json", createworkSpaceSchema),
+        zValidator("form", createworkSpaceSchema),
         sessionMiddleware,
         async (c) => {
             const tablesDB = c.get("TablesDB");
             const user = c.get("user");
             const storage = c.get("storage")
 
-            const {name, image} = c.req.valid("json");
+            const {name, image} = c.req.valid("form");
 
             let uploadedImageUrl: string | undefined;
 

@@ -39,7 +39,17 @@ export const CreateWorkspaceForm = ({onCancel}:CreateWorkspaceFormProps) => {
     });
 
     const onSubmit = (values: z.infer<typeof createworkSpaceSchema>) => {
-        mutate({json : values});
+        const finalValues = {
+            ...values,
+            image: values.image instanceof File ? values.image : "",
+        };
+
+        mutate({form : finalValues},
+            {onSuccess: () => {
+                form.reset();
+                //TODO: REDIRECT TO NEW WORKSPACE
+            }}
+        );
     };
 
     const handleImageChange = (e:React.ChangeEvent<HTMLInputElement>) =>{
