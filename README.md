@@ -1,4 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Tickita
+
+## Introduction
+Tickita is a robust and scalable application designed to streamline project management and collaboration. Built with a focus on **Reliable Logic**, **Web Accessibility (a11y)**, and a **Clean UI/UX**, Tickita provides a seamless experience for managing workspaces and projects.
+
+## Features
+
+### Seamless Integration and Responsive Design
+*   **Hono.js Backend Integration:** Leverages Hono.js for efficient and performant API routes seamlessly integrated within a Next.js App Router environment.
+*   **Responsive Sidebar and Navigation:** Provides an intuitive and accessible user experience across various devices with a meticulously designed, responsive sidebar and navigation system built with Tailwind CSS.
+
+### Robust Authentication
+*   **Appwrite Authentication:** Secure and flexible authentication mechanisms powered by Appwrite, supporting both OAuth providers and traditional Email/Password methods.
+
+### Workspace and Project Management
+*   **Comprehensive Management Logic:** Implements core logic for creating, organizing, and managing workspaces and projects, facilitating efficient team collaboration.
+
+## Reliable Logic: Technical Achievements
+
+### Appwrite Query Refactoring
+*   **SDK v1.5+ Compliance:** Successfully refactored all Appwrite queries to align with the latest SDK updates (v1.5+), ensuring optimal performance, enhanced security, and future compatibility. This involved addressing breaking changes and optimizing query structures for improved data retrieval and manipulation.
+
+## Tech Stack
+*   **Frontend:** Next.js (App Router), React
+*   **Backend:** Hono.js
+*   **Styling:** Tailwind CSS
+*   **Database/Authentication:** Appwrite
+
+## Current Status
+
+### Done
+*   Setup of a Hono.js backend integration within a Next.js App Router environment.
+*   Implementation of Authentication using Appwrite (OAuth and Email/Password).
+*   Creation of Workspace and Project Management logic.
+*   Refactored Appwrite Queries to comply with the latest SDK updates (v1.5+).
+*   Designed a Responsive Sidebar and Navigation using Tailwind CSS.
+
+### Pending
+*   [Further features and enhancements will be listed here as development progresses.]
 
 ## Getting Started
 
