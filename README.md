@@ -12,13 +12,20 @@ Tickita is a robust and scalable application designed to streamline project mana
 ### Robust Authentication
 *   **Appwrite Authentication:** Secure and flexible authentication mechanisms powered by Appwrite, supporting both OAuth providers and traditional Email/Password methods.
 
+### Invite Code Generation
+*   **Secure Invite Codes:** Implements a reliable mechanism for generating secure and unique invite codes, enabling controlled access and collaboration within workspaces. This feature enhances the application's ability to manage user onboarding and access permissions efficiently.
+
 ### Workspace and Project Management
 *   **Comprehensive Management Logic:** Implements robust logic for creating, organizing, and managing workspaces and projects, facilitating efficient team collaboration. Users can easily create new workspaces, each with its own dedicated environment.
+*   **Role-Based Access Control (RBAC):** Integrates role-based access control (e.g., Admin, Member) to manage permissions within workspaces, ensuring secure and appropriate access levels for different team members.
 
 #### How it works: Workspace Creation
 The application leverages Appwrite's database capabilities to securely store workspace information. When a user creates a new workspace, the system captures details such as the workspace name and an optional image. This data is then validated using Zod schemas and securely persisted in the Appwrite database, ensuring data integrity and reliable creation of new collaborative spaces. Images are uploaded to Appwrite Storage, with their references securely linked to the respective workspaces.
 
 ## Reliable Logic: Technical Achievements
+
+### Robust Authentication and Session Management
+*   **Enhanced Session Control:** Implemented advanced session management within the authentication system, ensuring secure user experiences and reliable session invalidation (e.g., during logout) across the application. This contributes to a highly secure and dependable user authentication flow.
 
 ### Appwrite Query Refactoring
 *   **SDK v1.5+ Compliance:** Successfully refactored all Appwrite queries to align with the latest SDK updates (v1.5+), ensuring optimal performance, enhanced security, and future compatibility. This involved addressing breaking changes and optimizing query structures for improved data retrieval and manipulation.
